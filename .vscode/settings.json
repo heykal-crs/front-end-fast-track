@@ -1,0 +1,8 @@
+{
+	"workbench.colorTheme": "Monokai Night",
+	"editor.fontFamily": "MonoLisa",
+	"terminal.integrated.fontFamily": "MonoLisa",
+	"workbench.iconTheme": "developer-icon-theme",
+	"editor.minimap.autohide": true,
+	"editor.minimap.enabled": false
+}
