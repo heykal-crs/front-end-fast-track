@@ -1,0 +1,128 @@
+/* for tablet */
+@media (max-width: 1200px){
+	.product img{
+		width: 175px;
+		padding: 0 20px;
+	}
+	.top-wrapper h1{
+		font-size: 100px;
+	}
+	header a{
+		font-size: 14px;
+	}
+	.header-left h1{
+		font-size: 30px;
+	}
+
+	.container{
+		padding: 0 0;
+	}
+
+	.icon-logo{
+		width: 40px;
+	}
+
+	.top-wrapper .stiker{
+		width: 200px;
+	}
+
+	.header-right, .footer-right{
+		padding-right: 50px;
+	}
+
+	.header-left, .footer-left{
+		padding-left: 50px;
+	}
+}
+
+
+/* for mobile */
+@media (max-width: 695px){
+	.product{
+		width: 100%;
+		padding-bottom: 50px;
+	}
+
+	.top-wrapper h1{
+		font-size: 80px;
+	}
+
+	.top-wrapper h2{
+		font-size: 35px;
+	}
+
+	.top-wrapper .stiker{
+		width: 150px;
+	}
+
+	footer{
+		text-align: center;
+	}
+
+	footer .logo{
+		display: inline-block;
+		padding-bottom: 20px;
+		float: none;
+	}
+	
+	.footer-right{
+		float: none;
+		clear: both;
+	}
+
+	.footer-right a{
+		display: block;
+		padding: 20px 0;
+	}
+
+	.header-right{
+		display: none;
+	}
+
+	.header-left{
+		padding: 0 20px;
+	}
+
+	.menu-icon .fi{
+		display: block;
+	}
+}
+
+@media (max-width: 450px) {
+	h1{
+		font-size: 28px
+	}
+	p, .product p{
+		font-size: 14px;
+	}
+	.footer-right a{
+		font-size: 12px;
+	}
+	.top-wrapper h1{
+		font-size: 45px;
+	}
+	.top-wrapper h2{
+		font-size: 25px;
+	}
+	.top-wrapper .stiker{
+		width: 80px;
+	}
+}
+
+@media (max-width: 350px){
+	.header-left h1{
+		display: none;
+	}
+	h1{
+		font-size: 20px
+	}
+	p, .product p{
+		font-size: 14px;
+	}
+	.footer-left h1{
+		font-size: 20px;
+	}	
+	.footer-right a{
+		font-size: 12px;
+	}
+}
