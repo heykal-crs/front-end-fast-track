@@ -1,5 +1,6 @@
 :root{
 	--main-black-color: rgba(32, 32, 32);
+	--main-gold-color : rgb(244, 217, 63)
 }
 
 *{
@@ -16,14 +17,14 @@ a{
 	text-decoration: none;
 }
 
-header{
+.top-header{
 	background-color: rgba(32, 32, 32, 0.9);
 	position: fixed;
 	width: 100%;
 	z-index: 10;
 }
 
-header .logo{
+.top-header .logo{
 	padding: 20px 0;
 }
 
@@ -175,6 +176,64 @@ button[class="send"]{
 	background-color: rgba(244, 217, 63, 0.8);
 	cursor: pointer;
 	transition: all 0.3s;
+	
+}
+
+/* Show and hide modal */
+#modal{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(110, 110, 110, 0.8);
+	width: 100%;
+	height: 100%;
+	padding-top: 200px;
+}
+
+#modalContent{
+	background-color: white;
+	padding: 50px 20px;
+	width: 500px;
+	margin: auto;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 8px 12px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+#modalHeader{
+	font-size: 35px;
+	text-align: right;
+	position: relative;
+	top: -30px;
+	padding-right: 20px;
+	cursor: pointer;
+}
+
+#modalContent h2{
+	padding: 10px 0;
+}
+
+#modalContent button{
+	padding: 13px 50px;
+	width: 50%;
+	margin: 10px auto;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+}
+
+#submitBtn{
+	background-color: rgba(244, 217, 63, 0.9);
+}
+#submitBtn:hover{
+	background-color: rgba(244, 217, 63, 1);
+}
+
+#cancelBtn:hover{
+	background-color: rgb(231, 231, 231);
 }
 
 .fi{

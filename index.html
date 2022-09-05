@@ -6,23 +6,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./style.css">
-	<link
+	<link b
 		href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
 		rel="stylesheet">
 	<title>Ninja ken</title>
 	<link rel="stylesheet" href="./responsive.css">
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 	<link rel="icon" type="image/x-icon" href="./img/ninja.png">
 </head>
 
 <body>
-	<header>
+	<header class="top-header">
 		<div class="container">
 			<div class="header-left">
 				<div class="logo">
 					<img src="./img/ninja.png" alt="ninja" class="icon-logo">
-					<h1>NINJA KEN</h1>
+					<h1 id="title">NINJA KEN</h1>
 				</div>
 			</div>
 			<a href="#" class="menu-icon">
@@ -77,17 +78,35 @@
 			</div>
 		</div>
 	</div>
-	<div class="contact-wrapper" id="contact">
+	<div class="contact-wrapper">
 		<div class="container">
 			<div class="heading">
-				<h1>Hubungi Saya</h1>
+				<h1 id="head-form-text">Hubungi Saya</h1>
 			</div>
 			<div class="form-field">
-				<form action="#">
-					<input type="email" class="form-box" placeholder="Email (diperlukan)">
-					<textarea class="form-box" placeholder="Message (diperlukan)"></textarea>
-					<button type="submit" class="send"><b>Kirim</b><i class="fi fi-ss-paper-plane"></i></button>
+				<form action="#" id="form1" onsubmit="return validateForm()">
+					<input type="email" class="form-box" placeholder="Email (diperlukan)" id="email">
+					<textarea class="form-box" placeholder="Message (diperlukan)" id="text-msg"></textarea>
+					<button type="button" id="btn" class="send">
+						<b>Kirim</b>
+						<i class="fi fi-ss-paper-plane"></i>
+					</button>
+					<p id="list"></p>
+
+					<!-- Modal -> code below will show if trigger is clicked-->
+					<div id="modal">
+						<div id="modalContent">
+							<header id="modalHeader">&times;</header>
+							<img src="./img/ninja.png" id="image-modal" alt="" width="50px">
+							<h2 id="modalTitle">Mengirim Pesan?</h2>
+							<button id="submitBtn"><b>Yes</b></button>
+							<button type="button" id="cancelBtn"><b>Cancel</b></button>
+
+						</div>
+					</div>
 				</form>
+
+
 			</div>
 		</div>
 	</div>
@@ -107,6 +126,7 @@
 			<div class="clear"></div>
 		</div>
 	</footer>
+	<script src="./script.js"></script>
 </body>
 
 </html>
