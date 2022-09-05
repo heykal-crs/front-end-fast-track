@@ -215,14 +215,13 @@ button[class="send"]{
 }
 
 #modalContent button{
-	padding: 13px 50px;
+	padding: 13px;
 	width: 50%;
 	margin: 10px auto;
 	outline: none;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	text-align: center;
 }
 
 #submitBtn{

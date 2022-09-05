@@ -86,6 +86,10 @@
 	.menu-icon .fi{
 		display: block;
 	}
+
+	#modalContent{
+		width: 80%;
+	}
 }
 
 @media (max-width: 450px) {
@@ -107,9 +111,7 @@
 	.top-wrapper .stiker{
 		width: 80px;
 	}
-	#modalContent{
-		width: 80%;
-	}
+	
 }
 
 @media (max-width: 350px){
