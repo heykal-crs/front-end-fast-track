@@ -9,6 +9,25 @@ const modalImage = document.getElementById('image-modal');
 /* Accordian variables */
 const accordianButton = document.getElementsByClassName('accBtn');
 
+const animated = (element, top, times, type) =>{
+	let time = setInterval(frame, times);
+	let pos = 0;
+	function frame(){
+		if (pos == top){
+			clearInterval(time);
+		} else{
+			if (type == 'topDown'){
+				pos+=2;
+				element.style.paddingTop = pos + "px";
+			}
+			else if (type == 'show'){
+				pos+=0.1;
+				element.style.opacity = pos;
+			}
+		}
+	}
+}
+
 /* Show modal */
 showModalButton.addEventListener('click', () =>{
 	const emailBox = document.forms['form1']['email'].value;
@@ -54,7 +73,6 @@ for (let i = 0; i < hideModalButton.length; i++){
 	});
 };
 
-
 /* Accordian */
 for (let i = 0; i < accordianButton.length; i++){
 	accordianButton[i].addEventListener('click', function(){
@@ -69,25 +87,35 @@ for (let i = 0; i < accordianButton.length; i++){
 	})
 }
 
+/* Slides */
+const autoNext = document.getElementById('autoNext');
+let autoNextInterval = setInterval(autoNextSlide, 5000);
 
-/* animated */
-function animated(element, top, times, type) {
-	let time = setInterval(frame, times);
-	let pos = 0;
-	function frame(){
-		if (pos == top){
-			clearInterval(time);
-		} else{
-			if (type == 'topDown'){
-				pos+=2;
-				element.style.paddingTop = pos + "px";
-			}
-			else if (type == 'show'){
-				pos+=0.1;
-				element.style.opacity = pos;
-			}
-		}
-	}
+let slideIndex = 1;
+
+function autoNextSlide (){
+	slideIndex++;
+	slideShow(slideIndex);
 }
 
+const nextSlide = (n) =>{
+	slideIndex += n;
+	slideShow(slideIndex);
+}
 
+const slideShow = (index) => {
+	const slide = document.getElementsByClassName('slide');
+	if (index > slide.length){
+		slideIndex = 1;
+	}
+	if (index < 1){
+		slideIndex = slide.length;
+	}
+
+	for (let i = 0; i < slide.length; i++){
+		slide[i].style.display = 'none';
+	}
+	slide[slideIndex - 1].style.display = 'block';
+}
+
+slideShow(slideIndex);
