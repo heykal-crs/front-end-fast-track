@@ -137,8 +137,19 @@ a{
 
 .product p{
 	font-size: 20px;
-	line-height: 65px;
+	padding: 40px 0 20px;
 	color: gray;
+}
+
+.product button{
+	padding: 5px;
+	cursor: pointer;
+}
+
+.product .panel{
+	font-size: 14px;
+	padding: 20px 40px;
+	display: none;
 }
 
 .contact-wrapper{
