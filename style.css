@@ -1,5 +1,6 @@
 :root{
-	--main-black-color: rgba(32, 32, 32);
+	--main-black-color: rgba(32, 32, 32, 0.9);
+	--main-black-color-hover: rgba(32, 32, 32, 1);
 	--main-gold-color : rgb(244, 217, 63)
 }
 
@@ -22,6 +23,7 @@ a{
 	position: fixed;
 	width: 100%;
 	z-index: 10;
+	transition: all 0.3s ease;
 }
 
 .top-header .logo{
@@ -68,6 +70,54 @@ a{
 
 .header-right a:hover{
 	background-color: rgba(32, 32, 32, 1);
+}
+
+.overlayNav{
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	width: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 11;
+	transition: all 0.3s ease;
+	color: whitesmoke;
+	overflow-x: hidden;
+	text-align: center;
+}
+
+.overlayNav .closeBtn{
+	font-size: 2rem;
+	cursor: pointer;
+	display: block;
+	padding: 20px;
+	text-align: right;
+}
+
+.overlayNav-content{
+	width: 100%;
+	text-align: center;
+}
+
+.overlayNav a{
+	display: block;
+	padding: 20px;
+	color: inherit;
+}
+
+.overlayNav a:hover,
+.overlayNav a:focus{
+	background-color: black;
+}
+
+.overlayNav footer{
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+}
+
+.overlayNav .copyright{
+	margin-top: 100px;
 }
 
 .top-wrapper{
@@ -155,18 +205,11 @@ a{
 
 .fade{
 	animation-name: fade;
-	animation-duration: 1.5s;
+	animation-duration: 5s;
 	animation-timing-function: ease-in-out;
 }
 
-@keyframes fade {
-	from {
-		opacity: 0.4;
-	}
-	to{
-		opacity: 1;
-	}
-}
+
 
 .about-wrapper h1{
 	padding-bottom: 40px;
@@ -203,16 +246,30 @@ a{
 	color: gray;
 }
 
-.product button{
-	padding: 5px;
+.accBtn{
+	padding: 8px 10px;
 	cursor: pointer;
+	background-color: var(--main-black-color);
+	border: none;
+	color: white;
+	border-radius: 5px;
+	font-size: 0.9em;
+	transition: all 0.3s ease;
+}
+
+.accBtn:hover{
+	background-color: var(--main-black-color-hover);
 }
 
 .product .panel{
 	font-size: 14px;
 	padding: 20px 40px;
 	display: none;
+	animation-name: zoom;
+	animation-duration: 0.3s;
 }
+
+
 
 .contact-wrapper{
 	text-align: center;

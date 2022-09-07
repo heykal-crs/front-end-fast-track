@@ -119,3 +119,27 @@ const slideShow = (index) => {
 }
 
 slideShow(slideIndex);
+
+/* scroll hide top bar */
+let prevScrollValue = window.pageYOffset;
+window.onscroll = () =>{
+	let currentScrollValue = window.pageYOffset;
+	const topBar = document.getElementById('topBar');
+	if (currentScrollValue > prevScrollValue){
+		topBar.style.top = '-80px';
+	} else{
+		topBar.style.top = '0px';
+	}
+	prevScrollValue = currentScrollValue;
+}
+
+/* hidden right bar */
+const iconMenu = document.getElementById("iconMenu");
+iconMenu.addEventListener('click', function (){
+	document.getElementById('rightNav').style.width = '100%';
+});
+
+const closeBtn = document.getElementById('closeBtn');
+closeBtn.addEventListener('click', function(){
+	document.getElementById('rightNav').style.width = '0';
+});	

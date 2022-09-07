@@ -1,0 +1,26 @@
+@keyframes fade {
+	0% {
+		opacity: 0.4;
+	}
+	25%{
+		opacity: 0.8;
+	}
+	50%{
+		opacity: 1;
+	}
+	75%{
+		opacity: 0.8;
+	}
+	100%{
+		opacity: 0.4;
+	}
+}
+
+@keyframes zoom {
+	from{
+		scale: 0;
+	} 
+	to{
+		scale: 1;
+	}
+}

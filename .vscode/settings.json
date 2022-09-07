@@ -1,12 +1,15 @@
 {
   "workbench.colorTheme": "Mayukai Reversal",
-  "editor.fontFamily": "MonoLisa",
-  "terminal.integrated.fontFamily": "MonoLisa",
+  "editor.fontFamily": "Apercu Mono",
+  "terminal.integrated.fontFamily": "Apercu Mono",
   "workbench.iconTheme": "vscode-icons",
   "editor.minimap.autohide": true,
   "editor.minimap.enabled": false,
-  "editor.lineHeight": 1.7,
+  "editor.lineHeight": 1.8,
   "terminal.integrated.fontSize": 13,
+  "editor.fontSize": 14,
   "terminal.integrated.lineHeight": 1.3,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "editor.fontWeight": "400",
+
 }

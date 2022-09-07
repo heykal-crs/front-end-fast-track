@@ -14,11 +14,12 @@
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+	<link rel="stylesheet" href="./animation.css">
 	<link rel="icon" type="image/x-icon" href="./img/ninja.png">
 </head>
 
 <body>
-	<header class="top-header">
+	<header class="top-header" id="topBar">
 		<div class="container">
 			<div class="header-left">
 				<div class="logo">
@@ -26,7 +27,7 @@
 					<h1 id="title">NINJA KEN</h1>
 				</div>
 			</div>
-			<a href="#" class="menu-icon">
+			<a href="#" class="menu-icon" id="iconMenu">
 				<span class="fi fi-rr-menu-burger"></span>
 			</a>
 			<div class="header-right">
@@ -36,6 +37,19 @@
 			</div>
 		</div>
 	</header>
+
+	<nav id="rightNav" class="overlayNav">
+		<span class="closeBtn" id="closeBtn">&times;</span>
+		<div class="overlayNav-content">
+			<a href="#about-me" class="nav">Tentang Saya</a>
+			<a href="#product" class="nav">Proyek Contoh</a>
+			<a href="#contact" class="nav">Hubungi Saya</a>
+		</div>
+		<footer>
+			<p class="copyright">Ken Ninja &copy; 2022</p>
+		</footer>
+	</nav>
+
 	<div class="top-wrapper">
 		<div class="container">
 			<h1 class="title">NINJA KEN<span>.</span></h1>
@@ -43,6 +57,7 @@
 			<img src="./img/ninja.png" alt="Ninja" class="stiker">
 		</div>
 	</div>
+
 	<div class="about-wrapper" id="about-me">
 		<div class="slide fade">
 			<img src="./img/adam-kool-ndN00KmbJ1c-unsplash.jpg" alt="">
@@ -53,7 +68,6 @@
 		<div class="slide fade">
 			<img src="./img/quino-al-mBQIfKlvowM-unsplash.jpg" alt="">
 		</div>
-
 		<div class="container">
 			<h1>Tentang Saya</h1>
 			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, recusandae aspernatur, atque quae
@@ -72,6 +86,7 @@
 		<a class="prev-slide" onclick="nextSlide(-1)">&#10094;</a>
 		<a class="next-slide" id="autoNext" onclick="nextSlide(1)">&#10095;</a>
 	</div>
+
 	<div class="product-wrapper" id="product">
 		<div class="container">
 			<div class="heading">
@@ -81,7 +96,7 @@
 				<div class="product">
 					<img src="./img/fast-food.png" alt="food">
 					<p>Food & Baverage</p>
-					<button type="button" class="accBtn">Read more</button>
+					<button type="button" class="accBtn">Show more</button>
 					<p class="panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sequi culpa
 						saepe sit iusto hic
 						ullam. Iure numquam at doloribus, optio consectetur nostrum asperiores tenetur debitis, enim
@@ -90,7 +105,7 @@
 				<div class="product">
 					<img src="./img/responsive.png" alt="food">
 					<p>Devices</p>
-					<button type="button" class="accBtn">Read more</button>
+					<button type="button" class="accBtn">Show more</button>
 					<p class="panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sequi culpa
 						saepe sit iusto hic
 						ullam. Iure numquam at doloribus, optio consectetur nostrum asperiores tenetur debitis, enim
@@ -99,7 +114,7 @@
 				<div class="product">
 					<img src="./img/clothes.png" alt="food">
 					<p>Clothes</p>
-					<button type="button" class="accBtn">Read more</button>
+					<button type="button" class="accBtn">Show more</button>
 					<p class="panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sequi culpa
 						saepe sit iusto hic
 						ullam. Iure numquam at doloribus, optio consectetur nostrum asperiores tenetur debitis, enim
@@ -109,7 +124,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="contact-wrapper">
+
+	<div class="contact-wrapper" id="contact">
 		<div class="container">
 			<div class="heading">
 				<h1 id="head-form-text">Hubungi Saya</h1>
@@ -140,6 +156,7 @@
 			</div>
 		</div>
 	</div>
+
 	<footer>
 		<div class="container">
 			<div class="footer-left">
